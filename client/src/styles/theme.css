@@ -1,0 +1,48 @@
+/* Identidad Iptel: valores tomados del manual (docs/branding). No agregar colores fuera de la paleta. */
+:root {
+  --iptel-violeta: #4f008c;
+  --iptel-naranja: #ff671b;
+  --iptel-violeta-brillante: #6025e1;
+  --iptel-aqua: #60f1d8;
+  --iptel-gris-claro: #b2b2b2;
+  --iptel-gris-oscuro: #3d3d3f;
+  --iptel-blanco: #ffffff;
+
+  --font-titulos: 'Nunito Sans', sans-serif; /* sustituto de Linotte */
+  --font-texto: 'Montserrat', sans-serif;
+
+  --radio: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-texto);
+  color: var(--iptel-gris-oscuro);
+  background: var(--iptel-blanco);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-titulos);
+  font-weight: 800;
+  color: var(--iptel-violeta);
+}
+
+button {
+  font-family: var(--font-texto);
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  background: var(--iptel-naranja);
+  color: var(--iptel-blanco);
+  cursor: pointer;
+}
