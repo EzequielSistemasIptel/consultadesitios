@@ -1,5 +1,15 @@
 # consultadesitios
 
+## Qué es
+
+Índice interno de los sistemas y aplicaciones que usa Iptel, mostrados como cards, para que toda la empresa los tenga accesibles.
+Más adelante se suma login y el sitio va a estar en red privada.
+
+- Cada sistema es un documento `Sistema` (`server/src/models/Sistema.js`): nombre, descripción, url, categoría, ícono opcional, orden y activo.
+- `GET /api/sistemas` devuelve los activos ordenados por categoría, orden y nombre.
+- Los datos se cargan con `npm run seed` desde `server/src/seed/sistemas.json` (reemplaza todo lo existente).
+- Alta, edición y baja por API se agregan **junto con el login**, para que nunca queden expuestas sin autenticación.
+
 ## Regla general: stack MERN
 
 Este proyecto usa **exclusivamente el stack MERN**. No introducir otros frameworks, lenguajes o bases de datos sin acuerdo explícito.
@@ -69,7 +79,8 @@ consultadesitios/
 ## Comandos
 
 - Backend: `cd server && npm install && npm run dev` (puerto 5000 por defecto).
-- Frontend: `cd client && npm install && npm run dev` (puerto 5173; `/api` se proxea al backend).
+- Cargar sistemas: `cd server && npm run seed`.
+- Frontend: `cd client && npm install && npm run dev` (puerto 5173; `/api` se proxea al backend, por defecto `http://localhost:5000`, configurable con `API_URL`).
 
 ## Convenciones
 
